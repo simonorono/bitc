@@ -7,7 +7,7 @@ plugins {
 }
 
 group = "com.simonorono"
-version = "1.1.1"
+version = "1.1.2"
 
 repositories {
     mavenCentral()
@@ -41,6 +41,14 @@ publishing {
     publications {
         register<MavenPublication>("gpr") {
             from(components["java"])
+        }
+    }
+}
+
+tasks.dokkaHtml {
+    dokkaSourceSets {
+        configureEach {
+            includes.from("README.md")
         }
     }
 }
