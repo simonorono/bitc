@@ -7,7 +7,7 @@ package com.simonorono.bitc
  * @property size The size of the array
  */
 class BitArray(val size: Int) {
-    private val innerArray = Array(
+    private val innerArray = IntArray(
         1.coerceAtLeast(
             Math.ceil(size.toDouble() / Int.SIZE_BITS.toDouble()).toInt()
         )
