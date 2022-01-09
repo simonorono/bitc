@@ -1,5 +1,11 @@
 package com.simonorono.bitc
 
+/**
+ * The BitArray class represents an array of booleans. It stores them packed
+ * inside regular integers to not waste the overhead of storing booleans.
+ *
+ * @property size The size of the array
+ */
 class BitArray(val size: Int) {
     private val innerArray = Array(
         1.coerceAtLeast(
@@ -13,12 +19,18 @@ class BitArray(val size: Int) {
         }
     }
 
+    /**
+     * Retrieve the value at position [idx].
+     */
     operator fun get(idx: Int): Boolean {
         checkBounds(idx)
 
         return (innerArray[idx / Int.SIZE_BITS] and (1 shl (idx % Int.SIZE_BITS))) != 0
     }
 
+    /**
+     * Sets the value at position [idx].
+     */
     operator fun set(idx: Int, value: Boolean) {
         checkBounds(idx)
 
@@ -33,6 +45,9 @@ class BitArray(val size: Int) {
         }
     }
 
+    /**
+     * The range of indices of the array.
+     */
     val indices: IntRange
         get() = IntRange(0, size - 1)
 }
