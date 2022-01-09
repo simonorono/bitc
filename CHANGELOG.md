@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.1
+
+### Features
+
+* Now targeting JVM 1.8 for Kotlin build.
+
 ## 1.1.0
 
 ### Features
