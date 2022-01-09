@@ -6,7 +6,12 @@
 
 * The new `BitMatrix` class, which is a representation of a bi-dimensional array
   of booleans.
-* 
+* Now using `IntArray` instead of `Array<Int>` in `BitArray` for performance
+  purposes.
+
+### Bug fixes
+
+* Fix the bound checks in `BitArray`.
 
 ## 1.0
 

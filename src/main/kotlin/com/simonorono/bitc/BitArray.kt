@@ -14,7 +14,7 @@ class BitArray(val size: Int) {
     ) { 0 }
 
     private fun checkBounds(idx: Int) {
-        if (idx < 0 || idx > size) {
+        if (idx < 0 || idx >= size) {
             throw IndexOutOfBoundsException()
         }
     }
