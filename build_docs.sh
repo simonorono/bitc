@@ -1,3 +1,4 @@
+rm -rf docs
 bash gradlew dokkaHtml
 bash gradlew dokkaJavadoc
 
