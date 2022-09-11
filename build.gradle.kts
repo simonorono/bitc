@@ -51,4 +51,7 @@ tasks.dokkaHtml {
             includes.from("README.md")
         }
     }
+    pluginsMapConfiguration.set(mapOf(
+        "org.jetbrains.dokka.base.DokkaBase" to """{"footerMessage": "Created by Simón Oroño"}"""
+    ))
 }
