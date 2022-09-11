@@ -1,5 +1,7 @@
 package com.simonorono.bitc
 
+import kotlin.math.ceil
+
 /**
  * The BitArray class represents an array of booleans. It stores them packed
  * inside regular integers to not waste the overhead of storing booleans.
@@ -9,7 +11,7 @@ package com.simonorono.bitc
 class BitArray(val size: Int) {
     private val innerArray = IntArray(
         1.coerceAtLeast(
-            Math.ceil(size.toDouble() / Int.SIZE_BITS.toDouble()).toInt()
+            ceil(size.toDouble() / Int.SIZE_BITS.toDouble()).toInt()
         )
     ) { 0 }
 
