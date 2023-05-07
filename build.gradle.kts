@@ -1,8 +1,8 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    kotlin("jvm") version "1.8.0"
-    id("org.jetbrains.dokka") version "1.7.20"
+    kotlin("jvm") version "1.8.20"
+    id("org.jetbrains.dokka") version "1.8.10"
     `maven-publish`
 }
 
@@ -14,8 +14,8 @@ repositories {
 }
 
 dependencies {
-    testImplementation(kotlin("test"))
-    dokkaHtmlPlugin("org.jetbrains.dokka:kotlin-as-java-plugin:1.7.20")
+    testImplementation("org.jetbrains.kotlin:kotlin-test:1.8.10")
+    dokkaHtmlPlugin("org.jetbrains.dokka:kotlin-as-java-plugin:1.8.10")
 }
 
 tasks.test {
